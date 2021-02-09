@@ -18,6 +18,13 @@ module.exports = (appInfo) => {
   // add your middleware config here
   config.middleware = [];
 
+  // 配置csrf的跨域攻击
+  config.security = {
+    csrf: {
+      enable: false,
+    },
+    domainWhiteList: ["*"],
+  };
   // add your user config here
   const userConfig = {
     // myAppName: 'egg',
